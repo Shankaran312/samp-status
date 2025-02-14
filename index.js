@@ -26,8 +26,8 @@ client.on('ready', () => {
     setInterval(() => {
         gamedig.query({
             type: 'samp',
-            host: '127.0.0.1', // add your samp server ip inside ''
-            port: 7777 // replace 7777 with your server pot
+            host: ' 172.236.95.159', // add your samp server ip inside ''
+            port:  33023 // replace 7777 with your server pot
         }).then((state) => {
             // Set the bot's activity based on the server status
             client.user.setActivity(`on ${state.name} (${state.players.length} players online!)  | ${website}`, {
@@ -57,8 +57,8 @@ client.on("message", (message) => {
 
             gamedig.query({
                 type: 'samp',
-                host: '127.0.0.1', // add your samp server ip inside ''
-                port: 7777 // replace 7777 with your server pot
+                host: ' 172.236.95.159', // add your samp server ip inside ''
+                port:  33023 // replace 7777 with your server pot
             }).then((state) => {
                 let players = state.players;
                 let playerList = "";
@@ -71,7 +71,7 @@ client.on("message", (message) => {
                 }
                 const embed = new Discord.MessageEmbed()
                     .setColor("RANDOM")
-                    .setTitle(`Your Server Name - Total Players: ${state.players.length}`)
+                    .setTitle(`Horizon City Roleplay - Total Players: ${state.players.length}`)
                     .setDescription(playerList)
                     .setFooter('Your Server Name', 'https://imgur.com/a/aRj8eq') //replace https://imgur.com/a/aRj8eq with your server icon url
                     .setTimestamp()
@@ -156,4 +156,4 @@ client.on("message", async (message) => {
     }
 });
 // Login
-client.login("YOUR_BOT_TOKEN"); // Replace with your actual bot token
+client.login("MTMyNjkxMTY5NTI1MTE3NzYwNQ.Gp7hlw.JVi-d2BtJHEhUp51krHwE8bFZ8l2xywDMKRXD0); // Replace with your actual bot token
